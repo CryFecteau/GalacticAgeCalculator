@@ -14,32 +14,66 @@ class UserAge {
         let userDay = (date.getDate() - this.day) * 86400;
         return userYear + userMonth + userDay;
     }
-    //This will calculate users earth years of age in seconds to Mercurys years in seconds
+    //This will calculate users current age into earth years(for UI purpose only)
+    earthCurrentAge(){
+        let age = this.calAge();
+        let newAge = age / 3.154e+7;
+        return newAge.toFixed();
+    }
+    //Current Age objects will calculate users age in earth years into seconds then muliply it to Planets year differnce and return a whole number for each one
     mercuryCurrentAge() {
         let age = this.calAge();
-        return age / 3.154e+7 * .24;
+        let newAge = age / 3.154e+7 * .24 ;
+        return newAge.toFixed();
     }
-    //This will calculate users earth years of age in seconds to Venus years in seconds
     venusCurrentAge() {
         let age = this.calAge();
-        return age / 3.154e+7 * .62;
+        let newAge = age / 3.154e+7 * .62;
+        return newAge.toFixed();
     }
-    //This will calculate users earth years of age in seconds to Mars years in seconds
     marsCurrentAge() {
         let age = this.calAge();
-        return age / 3.154e+7 * .88;
+        let newAge = age / 3.154e+7 * .88;
+        return newAge.toFixed();
+
     }
-    //This will calculate users earth years of age in seconds to Jupiter years in seconds
     jupiterCurrentAge() {
         let age = this.calAge();
-        return age / 3.154e+7 * 11.86;
+        let newAge = age / 3.154e+7 * 11.86;
+        return newAge.toFixed();
     }
     //This will determine how long the user has lived or left to live on each plant
     calucatedYears(planet){
         const averageLifespan = 79;
         if(planet === "Mercury"){
             let yearsLeft = averageLifespan * .24 - this.mercuryCurrentAge();
-            
+            if(yearsLeft >= 0){
+                return "You can live " + yearsLeft.toFixed() + " more years on Mercury";
+            }else{
+                return "Sorry but you died " + yearsLeft.toFixed() + " years ago on Mercury";
+            }
+        }else if(planet === "Venus"){
+            let yearsLeft = averageLifespan * .62 - this.venusCurrentAge();
+            if(yearsLeft >= 0){
+                return "You can live " + yearsLeft.toFixed() + " more years on Venus";
+            }else{
+                return "Sorry but you died " + yearsLeft.toFixed() + " years ago on Venus";
+            }
+        }else if(planet === "Mars"){
+            let yearsLeft = averageLifespan * .88 - this.marsCurrentAge();
+            if(yearsLeft >= 0){
+                return "You can live " + yearsLeft.toFixed() + " more years on Mars";
+            }else{
+                return "Sorry but you died " + yearsLeft.toFixed() + " years ago on Mars";
+            }
+        }else if(planet === "Jupiter"){
+            let yearsLeft = averageLifespan * 11.86 - this.jupiterCurrentAge();
+            if(yearsLeft >= 0){
+                return "You can live " + yearsLeft.toFixed() + " more years on Jupier";
+            }else{
+                return "Sorry but you died " + yearsLeft.toFixed() + " years ago on Jupiter";
+            }
         }
     }
 }
+export {UserAge}
