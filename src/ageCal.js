@@ -69,7 +69,7 @@ class UserAge {
         }else if(planet === "Jupiter"){
             let yearsLeft = averageLifespan * 11.86 - this.jupiterCurrentAge();
             if(yearsLeft >= 0){
-                return "You can live " + yearsLeft.toFixed() + " more years on Jupier";
+                return "You can live " + yearsLeft.toFixed() + " more years on Jupiter";
             }else{
                 return "Sorry but you died " + yearsLeft.toFixed() + " years ago on Jupiter";
             }
