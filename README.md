@@ -3,7 +3,7 @@ Epicodus Solo Project
 #### By Crystal Fecteau
 
 ## Description
-A web application to see how old you are or were on other planets before hitting the average life expectancy of 79 years old.
+A web application to see how old you are or were on other planets before hitting the average life expectancy of 79 years old on Earth.
 
 ### Specs 
 | Spec | Input | Output |
@@ -14,7 +14,7 @@ A web application to see how old you are or were on other planets before hitting
 | **Check age on Venus**| Input: 25 | Return: 16 |
 | **Years left on Venus** | Input: 25 | Return: 33|
 | **Check age on Mars**| Input: 25 | Output: 22 |
-| **Years left on Mars** | Input: 25 | Return: 301|
+| **Years left on Mars** | Input: 25 | Return: 48|
 | **Check age on Jupiter** | Input: 25 | Output: 301 |
 | **Years left on Jupiter** | Input: 25 | Return: 636|
 
@@ -33,9 +33,9 @@ npm install
 npm run start
 
 ## Testing
-npm install
-npm run build
-npm run test
+* npm install
+* npm run build
+* npm run test
 
 # Technologies Used
 
